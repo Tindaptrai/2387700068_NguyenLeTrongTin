@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 
-from securevalidator import (
+from core import (
     validate_email, validate_url, validate_filename,
     sanitize_sql_input, sanitize_html_input,
 )
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 
 
 @app.route("/", methods=["GET", "POST"])

@@ -1,8 +1,8 @@
 # SecureValidator — Phân tích lỗ hổng bảo mật trong `core.py`
 
 > Bài tập: Cơ sở lập trình bảo mật – Kiểm tra dữ liệu đầu vào.
-> Mục tiêu của README này **không phải** để sửa code, mà để **chỉ ra rằng thư viện
-> `securevalidator` — dù đặt tên là "Secure" và có docstring khẳng định "ngăn chặn"
+> Mục tiêu của README này **không phải** để sửa code, mà để **chỉ ra rằng module
+> `core.py` — dù đặt tên là "Secure" và có docstring khẳng định "ngăn chặn"
 > injection/SSRF/traversal — thực chất chứa nhiều lỗ hổng logic điển hình**, và trình
 > bày cách khai thác từng lỗ hổng đó bằng dẫn chứng thực nghiệm (input → output thật,
 > chạy trực tiếp trên `core.py` không sửa đổi).
@@ -10,18 +10,17 @@
 ## 1. Cấu trúc project
 
 ```
-secure-validator-lab/
+Lab1/
 ├── app.py
+├── core.py             <-- đối tượng phân tích chính
+├── index.html
+├── test_validators.py
 ├── requirements.txt
 ├── render.yaml
-├── securevalidator/
-│   ├── __init__.py
-│   └── core.py        <-- đối tượng phân tích chính
-├── templates/index.html
-└── tests/test_validators.py
+└── .gitignore
 ```
 
-`tests/test_validators.py` chạy `python -m unittest discover tests` cho kết quả
+`test_validators.py` chạy `python -m unittest test_validators` cho kết quả
 **"Ran 10 tests ... OK"** — tức là toàn bộ unit test đều xanh. Đây chính là điểm mấu
 chốt cần trình bày: **test pass không có nghĩa là an toàn**. Bộ test chỉ kiểm tra vài
 case mẫu (`' OR 1=1 --`, `<script>alert("XSS")</script>`...), trong khi kẻ tấn công
@@ -194,7 +193,7 @@ giá trị được chèn vào **text node** của HTML (giữa hai thẻ). Tuy 
   kép đúng cách, URL (`href="..."`), hoặc bên trong `<script>` — thì escape HTML đơn
   thuần **không đủ**, vì kẻ tấn công cần thoát khỏi ngữ cảnh JS/URL chứ không phải
   ngữ cảnh HTML. Hàm không biết & không thể biết nó sẽ được chèn vào đâu.
-- Trong `templates/index.html`, giá trị hiển thị qua `{{ results.html }}`. Jinja2 mặc
+- Trong `index.html`, giá trị hiển thị qua `{{ results.html }}`. Jinja2 mặc
   định **tự động escape** cho file `.html` — nghĩa là kể cả khi `sanitize_html_input`
   có sai sót, tầng template vẫn escape lại một lần nữa (defense-in-depth tình cờ, không
   phải do thiết kế chủ đích của lab).
@@ -229,7 +228,7 @@ hàm "escape chung" nào dùng được cho mọi ngữ cảnh.
 
 ## 9. Bài học chính để trình bày
 
-1. **Test pass ≠ an toàn.** Bộ `tests/test_validators.py` xanh 10/10 nhưng chỉ vì
+1. **Test pass ≠ an toàn.** Bộ `test_validators.py` xanh 10/10 nhưng chỉ vì
    test case trùng khớp với đúng những gì hàm được viết để chặn.
 2. **Blacklist (chặn từ khoá/ký tự đã biết) luôn có thể bị lách** — điểm yếu cốt lõi
    của `sanitize_sql_input`. Giải pháp đúng cho SQL injection không phải là "lọc chuỗi
@@ -242,8 +241,9 @@ hàm "escape chung" nào dùng được cho mọi ngữ cảnh.
 
 ---
 
-*Ghi chú: `core.py`, `__init__.py`, `requirements.txt`, `.gitignore`, `templates/index.html`
-được chép lại nguyên văn từ tài liệu thực hành. `app.py` không xuất hiện rõ trong tài
-liệu (chỉ thấy log chạy chương trình) nên được viết lại tối thiểu để khớp với
-`templates/index.html` và các hàm trong `securevalidator`, phục vụ mục đích chạy thử
-và kiểm chứng các PoC ở trên — phần này không phải chụp lại 1:1 từ tài liệu gốc.*
+*Ghi chú: `core.py`, `requirements.txt`, `.gitignore`, `index.html` được chép lại
+nguyên văn từ tài liệu thực hành (ban đầu tổ chức thành package `securevalidator/` +
+`templates/`, sau đó được gộp phẳng vào `Lab1/` theo yêu cầu). `app.py` không xuất
+hiện rõ trong tài liệu (chỉ thấy log chạy chương trình) nên được viết lại tối giản để
+khớp với `index.html` và các hàm trong `core.py`, phục vụ mục đích chạy thử và kiểm
+chứng các PoC ở trên — phần này không phải chụp lại 1:1 từ tài liệu gốc.*
