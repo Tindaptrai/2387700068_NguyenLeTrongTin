@@ -6,6 +6,8 @@
 > Mỗi mục dưới đây gồm: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**.
 > Toàn bộ output là kết quả gọi trực tiếp hàm trong `core.py` (Python 3.13), không chỉnh sửa.
 
+![Demo terminal Lab1](term_lab1.svg)
+
 ## Cấu trúc
 
 ```

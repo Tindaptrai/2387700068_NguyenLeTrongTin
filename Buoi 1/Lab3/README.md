@@ -6,6 +6,8 @@
 > Mỗi mục: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**. Output là kết quả
 > chạy thật `app.py` (Flask) qua HTTP, y hệt cách demo trong tài liệu.
 
+![Demo terminal Lab3](term_lab3.svg)
+
 ## Cấu trúc
 
 ```

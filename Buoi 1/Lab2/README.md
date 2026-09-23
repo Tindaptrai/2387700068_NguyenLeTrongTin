@@ -6,6 +6,8 @@
 > Mỗi mục: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**. Output là kết quả
 > chạy thật `pre-commit` (không sửa) cùng Bandit 1.9.4.
 
+![Demo terminal Lab2](term_lab2.svg)
+
 ## Cấu trúc
 
 ```
