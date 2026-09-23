@@ -6,8 +6,6 @@
 > Mỗi mục: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**. Output là kết quả
 > chạy thật `pre-commit` (không sửa) cùng Bandit 1.9.4.
 
-![Demo terminal Lab2](term_lab2.svg)
-
 ## Cấu trúc
 
 ```
@@ -20,6 +18,8 @@ Lab2/
 ---
 
 ## 1. Bypass `run_bandit()` → Kiểm tra Bandit KHÔNG BAO GIỜ chạy
+
+![Terminal lỗi 1](term_lab2_1.svg)
 
 ### Code
 ```python
@@ -50,6 +50,8 @@ có cấu trúc, không grep chuỗi tiếng người.
 ---
 
 ## 2. Bypass `scan_sensitive()` → Secret hardcode vẫn lọt
+
+![Terminal lỗi 2](term_lab2_2.svg)
 
 ### Code
 ```python
@@ -86,6 +88,8 @@ blacklist theo mẫu cố định, cùng lỗi tư duy với `sanitize_sql_input
 
 ## 3. Kết hợp 1+2 → File nguy hiểm vẫn "All checks passed"
 
+![Terminal lỗi 3](term_lab2_3.svg)
+
 ### Kết quả chạy thật
 ```python
 # sample2.py — vừa lộ API key (snake_case), vừa có lỗi High/High thật (telnetlib)
@@ -112,6 +116,8 @@ Lỗi 1 (bandit chết) + lỗi 2 (regex né được) cộng dồn → hook mù
 
 ## 4. Bypass toàn bộ hook → `git commit --no-verify`
 
+![Terminal lỗi 4](term_lab2_4.svg)
+
 ### Nguyên nhân (giới hạn kiến trúc)
 - `git commit --no-verify` bỏ qua **toàn bộ** pre-commit — chỉ cần thêm 1 flag.
 - Hook chỉ chạy nếu người dùng tự `git config core.hooksPath .githooks` sau khi clone;
@@ -124,6 +130,8 @@ phải ở **server-side** (pre-receive hook / CI pipeline / secret scanning c�
 ---
 
 ## 5. `scan_sensitive()` đọc working tree, không đọc nội dung staged
+
+![Terminal lỗi 5](term_lab2_5.svg)
 
 ### Kết quả chạy thật
 ```
@@ -144,6 +152,8 @@ trong index và sắp được commit nhưng hook không thấy. Cách đúng: `
 ---
 
 ## 6. `check_permissions()` trên Windows → tắt hẳn kiểm tra
+
+![Terminal lỗi 6](term_lab2_6.svg)
 
 ### Code
 ```python

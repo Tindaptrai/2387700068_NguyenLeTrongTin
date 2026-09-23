@@ -6,8 +6,6 @@
 > Mỗi mục dưới đây gồm: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**.
 > Toàn bộ output là kết quả gọi trực tiếp hàm trong `core.py` (Python 3.13), không chỉnh sửa.
 
-![Demo terminal Lab1](term_lab1.svg)
-
 ## Cấu trúc
 
 ```
@@ -23,6 +21,8 @@ Lab1/
 ---
 
 ## 1. Bypass `validate_url()` → SSRF (Server-Side Request Forgery)
+
+![Terminal lỗi 1](term_lab1_1.svg)
 
 ### Code
 ```python
@@ -54,6 +54,8 @@ resolve DNS + chặn dải private, chặn redirect về nội bộ.
 ---
 
 ## 2. Bypass `sanitize_sql_input()` → SQL Injection
+
+![Terminal lỗi 2](term_lab1_2.svg)
 
 ### Code
 ```python
@@ -101,6 +103,8 @@ chỉnh**. Cách đúng: **parameterized query / prepared statement**
 
 ## 3. Bypass `validate_filename()` → Path Traversal
 
+![Terminal lỗi 3](term_lab1_3.svg)
+
 ### Code
 ```python
 def validate_filename(filename: str) -> bool:
@@ -133,6 +137,8 @@ bước khác. → **CWE-22**. Cách đúng: kiểm tra sau khi đã decode hế
 
 ## 4. `validate_email()` → Kiểm tra hình thức quá lỏng
 
+![Terminal lỗi 4](term_lab1_4.svg)
+
 ### Code
 ```python
 pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
@@ -154,6 +160,8 @@ hình thức email không phải là một control bảo mật.
 ---
 
 ## 5. `sanitize_html_input()` → Đúng cho text node, chưa đủ cho ngữ cảnh khác
+
+![Terminal lỗi 5](term_lab1_5.svg)
 
 ### Code
 ```python

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="162" font-family="Consolas, 'Cascadia Mono', 'Courier New', monospace" font-size="15">
+<rect width="1000" height="162" rx="8" fill="#0c0c0c"/>
+<rect width="1000" height="30" rx="8" fill="#2d2d2d"/><rect y="22" width="1000" height="8" fill="#2d2d2d"/>
+<circle cx="18" cy="18" r="6" fill="#ff5f56"/><circle cx="36" cy="18" r="6" fill="#ffbd2e"/><circle cx="54" cy="18" r="6" fill="#27c93f"/><text x="500" y="22" fill="#767676" text-anchor="middle" font-size="12">Loi 5 - sanitize_html_input() -&gt; chi dung 1 ngu canh</text>
+<text x="18.0" y="63.0" fill="#3a96dd">PS C:\Users\Tin\Buoi1\Lab1&gt;</text><text x="258.8" y="63.0" fill="#e5e5e5">python</text><text x="18.0" y="87.0" fill="#3a96dd">&gt;&gt;&gt;</text><text x="52.4" y="87.0" fill="#e5e5e5">sanitize_html_input(&quot;&lt;script&gt;alert(1)&lt;/script&gt;&quot;)</text><text x="18.0" y="111.0" fill="#13a10e">&#x27;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&#x27;</text><text x="370.6" y="111.0" fill="#13a10e"># OK cho text node</text><text x="18.0" y="135.0" fill="#767676"># nhung neu chen vao thuoc tinh / href / &lt;script&gt; thi KHONG du</text>
+</svg>

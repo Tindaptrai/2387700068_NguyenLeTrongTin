@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="138" font-family="Consolas, 'Cascadia Mono', 'Courier New', monospace" font-size="15">
+<rect width="1000" height="138" rx="8" fill="#0c0c0c"/>
+<rect width="1000" height="30" rx="8" fill="#2d2d2d"/><rect y="22" width="1000" height="8" fill="#2d2d2d"/>
+<circle cx="18" cy="18" r="6" fill="#ff5f56"/><circle cx="36" cy="18" r="6" fill="#ffbd2e"/><circle cx="54" cy="18" r="6" fill="#27c93f"/><text x="500" y="22" fill="#767676" text-anchor="middle" font-size="12">Loi 3 - secure.log.sig khong delimiter / khong rotate</text>
+<text x="18.0" y="63.0" fill="#3a96dd">PS C:\Users\Tin\Buoi1\Lab3&gt;</text><text x="258.8" y="63.0" fill="#e5e5e5">(Get-Item secure.log.sig).Length   # sau 2 dong log</text><text x="18.0" y="87.0" fill="#e5e5e5">128</text><text x="61.0" y="87.0" fill="#e74856"># = 2 x 64 ky tu, noi lien khong dau phan cach</text><text x="18.0" y="111.0" fill="#767676">a4a0934226e24a...962f5219bba6aea813...411848fd</text>
+</svg>

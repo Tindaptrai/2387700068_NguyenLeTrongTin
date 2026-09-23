@@ -6,8 +6,6 @@
 > Mỗi mục: **Code → Cách bypass → Kết quả chạy thật → Nguyên nhân**. Output là kết quả
 > chạy thật `app.py` (Flask) qua HTTP, y hệt cách demo trong tài liệu.
 
-![Demo terminal Lab3](term_lab3.svg)
-
 ## Cấu trúc
 
 ```
@@ -20,6 +18,8 @@ Lab3/
 ---
 
 ## 1. Bypass `mask_pii()` → Mật khẩu / token ghi thẳng ra log
+
+![Terminal lỗi 1](term_lab3_1.svg)
 
 ### Code
 ```python
@@ -59,6 +59,8 @@ giờ lộ trong demo. → mask phải khớp **hình dạng thật của dữ l
 
 ## 2. Bypass tamper detection → "Chữ ký" `secure.log.sig` giả được
 
+![Terminal lỗi 2](term_lab3_2.svg)
+
 ### Code
 ```python
 def hash_line(line):
@@ -88,6 +90,8 @@ cố ý. Cách đúng: `hmac.new(SECRET_KEY, line, sha256)` (khoá lưu riêng) 
 ---
 
 ## 3. `secure.log.sig` không có dấu phân cách và không xoay vòng
+
+![Terminal lỗi 3](term_lab3_3.svg)
 
 ### Code
 ```python
