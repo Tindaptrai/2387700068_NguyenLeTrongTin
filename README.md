@@ -10,3 +10,5 @@ Thực hành Lập trình An toàn Thông tin.
   CLI, GUI và Flask API.
 - [Buổi 2 - Lab 2](Buoi%202/Lab2): mô phỏng hạ tầng khóa công khai với Root CA,
   Intermediate CA, chứng chỉ người dùng và CRL.
+- [Buổi 3 - Lab 03](Buoi%203): SecureChat dùng TLS và AES, NetRecon CLI/web
+  với quét cổng, nhận dạng dịch vụ, bảng ARP và gửi kết quả qua email.

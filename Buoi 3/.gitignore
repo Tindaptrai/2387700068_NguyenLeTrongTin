@@ -1,0 +1,15 @@
+# Cau hinh rieng va file sinh ra khi chay lab
+.env
+.env.local
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+gitsecure.log
+certs/
+*.key
+*.pem
+*.csr
+*.srl
+*.srl.bak
