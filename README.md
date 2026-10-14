@@ -12,3 +12,5 @@ Thực hành Lập trình An toàn Thông tin.
   Intermediate CA, chứng chỉ người dùng và CRL.
 - [Buổi 3 - Lab 03](Buoi%203): SecureChat dùng TLS và AES, NetRecon CLI/web
   với quét cổng, nhận dạng dịch vụ, bảng ARP và gửi kết quả qua email.
+- [Buổi 4 - Lab 04](Buoi%204): Web Vulnerability Scanner và JWT Security Tools,
+  kèm hướng dẫn cài đặt, chạy ứng dụng/API, bộ kiểm thử và ảnh minh họa.

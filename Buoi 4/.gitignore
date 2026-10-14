@@ -1,0 +1,7 @@
+# Local Python environments and generated artifacts
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+report.json
