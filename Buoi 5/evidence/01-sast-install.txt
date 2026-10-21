@@ -1,0 +1,28 @@
+Local environment: Python 3.12.1, Windows PowerShell
+> $envDir = Join-Path $env:TEMP "lab05-tin-sast-20261021"
+> py -3.12 -m venv $envDir
+Actual environment location may have moved due to redirects, links or junctions.
+  Requested location: "%TEMP%\lab05-tin-sast-20261021\Scripts\python.exe"
+  Actual location:    "%TEMP%\lab05-tin-sast-20261021\Scripts\python.exe"
+> & (Join-Path $envDir "Scripts\python.exe") -m pip install -r requirements.txt
+Collecting flake8 (from -r requirements.txt (line 1))
+  Obtaining dependency information for flake8 from https://files.pythonhosted.org/packages/b5/d4/8e58a7221419bf8cb194f362ab26abf504c983135975e4c785fac0852886/flake8-7.4.1-py2.py3-none-any.whl.metadata
+  Downloading flake8-7.4.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r requirements.txt (line 1))
+  Obtaining dependency information for mccabe<0.8.0,>=0.7.0 from https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl.metadata
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.16.0,>=2.15.0 (from flake8->-r requirements.txt (line 1))
+  Obtaining dependency information for pycodestyle<2.16.0,>=2.15.0 from https://files.pythonhosted.org/packages/56/e2/480bcdb153feecde4d736b18c908c7eee4846f11d7547d2e0c71499af630/pycodestyle-2.15.0-py2.py3-none-any.whl.metadata
+  Downloading pycodestyle-2.15.0-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<4.1.0,>=4.0.0 (from flake8->-r requirements.txt (line 1))
+  Obtaining dependency information for pyflakes<4.1.0,>=4.0.0 from https://files.pythonhosted.org/packages/44/b0/554d720d71083ccd24ba2f376c048544c073570e7bb18b34d769cef77f66/pyflakes-4.0.3-py2.py3-none-any.whl.metadata
+  Downloading pyflakes-4.0.3-py2.py3-none-any.whl.metadata (3.7 kB)
+Downloading flake8-7.4.1-py2.py3-none-any.whl (57 kB)
+   ---------------------------------------- 57.4/57.4 kB 1.5 MB/s eta 0:00:00
+Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Downloading pycodestyle-2.15.0-py2.py3-none-any.whl (31 kB)
+Downloading pyflakes-4.0.3-py2.py3-none-any.whl (66 kB)
+   ---------------------------------------- 66.2/66.2 kB 1.8 MB/s eta 0:00:00
+Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+Successfully installed flake8-7.4.1 mccabe-0.7.0 pycodestyle-2.15.0 pyflakes-4.0.3
+[exit code: 0]

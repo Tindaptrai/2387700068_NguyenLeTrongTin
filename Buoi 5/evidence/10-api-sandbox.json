@@ -1,0 +1,30 @@
+[
+  {
+    "method": "POST",
+    "path": "/api/sandbox",
+    "request": "{\"command\":\"echo Nguyen Le Trong Tin\"}",
+    "status": 200,
+    "body": {
+      "stderr": "",
+      "stdout": "Nguyen Le Trong Tin\n"
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/api/sandbox",
+    "request": "{\"command\":\"python -V\"}",
+    "status": 400,
+    "body": {
+      "error": "Only the echo demo command is allowed."
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/api/sandbox",
+    "request": "[1]",
+    "status": 400,
+    "body": {
+      "error": "JSON body must be an object."
+    }
+  }
+]

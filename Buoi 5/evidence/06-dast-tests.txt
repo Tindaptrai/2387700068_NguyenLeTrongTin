@@ -1,0 +1,20 @@
+
+> & $py -m unittest discover -s tests -v
+test_allowed_echo_returns_output (test_app.TestSandboxAPI.test_allowed_echo_returns_output) ... ok
+test_rejects_empty_object (test_app.TestSandboxAPI.test_rejects_empty_object) ... ok
+test_rejects_malformed_json (test_app.TestSandboxAPI.test_rejects_malformed_json) ... ok
+test_rejects_non_object_json (test_app.TestSandboxAPI.test_rejects_non_object_json) ... ok
+test_rejects_other_commands (test_app.TestSandboxAPI.test_rejects_other_commands) ... ok
+test_detects_large_integer (test_memory_analyzer.TestMemoryAnalyzer.test_detects_large_integer) ... ok
+test_signed_64_bit_boundaries (test_memory_analyzer.TestMemoryAnalyzer.test_signed_64_bit_boundaries) ... ok
+test_returns_interface_mapping (test_network_traffic_analyzer.TestNetworkTrafficAnalyzer.test_returns_interface_mapping) ... ok
+test_reads_current_process_memory (test_runtime_monitor.TestRuntimeMonitor.test_reads_current_process_memory) ... ok
+test_detects_suspicious_call_text (test_security_behavior_checker.TestSecurityBehaviorChecker.test_detects_suspicious_call_text) ... ok
+test_echo_demo_returns_output (test_virtual_sandbox.TestVirtualSandbox.test_echo_demo_returns_output) ... ok
+test_rejects_other_commands (test_virtual_sandbox.TestVirtualSandbox.test_rejects_other_commands) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.136s
+
+OK
+[exit code: 0]

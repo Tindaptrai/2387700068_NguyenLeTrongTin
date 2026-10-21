@@ -1,0 +1,58 @@
+[
+  {
+    "file": "examples/vulnerable_01.py",
+    "rule": "Use_of_eval",
+    "level": "error",
+    "line": 8,
+    "column": 12,
+    "message": "Use of eval can execute dynamic code and should be avoided."
+  },
+  {
+    "file": "examples/vulnerable_01.py",
+    "rule": "Pattern_Match",
+    "level": "warning",
+    "line": 3,
+    "column": 1,
+    "message": "Hard-coded password detected."
+  },
+  {
+    "file": "examples/vulnerable_01.py",
+    "rule": "Pattern_Match",
+    "level": "warning",
+    "line": 4,
+    "column": 1,
+    "message": "Importing pickle can be unsafe for untrusted data."
+  },
+  {
+    "file": "examples/vulnerable_01.py",
+    "rule": "F401",
+    "level": "note",
+    "line": 4,
+    "column": 1,
+    "message": "F401: 'pickle' imported but unused"
+  },
+  {
+    "file": "examples/vulnerable_01.py",
+    "rule": "E402",
+    "level": "note",
+    "line": 4,
+    "column": 1,
+    "message": "E402: module level import not at top of file"
+  },
+  {
+    "file": "examples/vulnerable_02.py",
+    "rule": "Use_of_eval",
+    "level": "error",
+    "line": 5,
+    "column": 12,
+    "message": "Use of eval can execute dynamic code and should be avoided."
+  },
+  {
+    "file": "examples/vulnerable_02.py",
+    "rule": "Use_of_exec",
+    "level": "error",
+    "line": 14,
+    "column": 5,
+    "message": "Use of exec can execute dynamic code and should be avoided."
+  }
+]

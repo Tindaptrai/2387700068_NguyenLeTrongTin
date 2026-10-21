@@ -1,0 +1,39 @@
+> git status --short --branch
+## main...origin/main
+ M README.md
+?? "Buoi 5/"
+> git ls-files --others --exclude-standard -- "Buoi 5"
+Buoi 5/.gitignore
+Buoi 5/dast-tool/__init__.py
+Buoi 5/dast-tool/app.py
+Buoi 5/dast-tool/main.py
+Buoi 5/dast-tool/memory_analyzer.py
+Buoi 5/dast-tool/network_traffic_analyzer.py
+Buoi 5/dast-tool/requirements.txt
+Buoi 5/dast-tool/runtime_monitor.py
+Buoi 5/dast-tool/security_behavior_checker.py
+Buoi 5/dast-tool/tests/test_app.py
+Buoi 5/dast-tool/tests/test_memory_analyzer.py
+Buoi 5/dast-tool/tests/test_network_traffic_analyzer.py
+Buoi 5/dast-tool/tests/test_runtime_monitor.py
+Buoi 5/dast-tool/tests/test_security_behavior_checker.py
+Buoi 5/dast-tool/tests/test_virtual_sandbox.py
+Buoi 5/dast-tool/virtual_sandbox.py
+Buoi 5/sast-tool/examples/vulnerable_01.py
+Buoi 5/sast-tool/examples/vulnerable_02.py
+Buoi 5/sast-tool/requirements.txt
+Buoi 5/sast-tool/rules/default_rules.json
+Buoi 5/sast-tool/sast_tool/__init__.py
+Buoi 5/sast-tool/sast_tool/ast_analyzer.py
+Buoi 5/sast-tool/sast_tool/code_quality_checker.py
+Buoi 5/sast-tool/sast_tool/main.py
+Buoi 5/sast-tool/sast_tool/sarif_reporter.py
+Buoi 5/sast-tool/sast_tool/security_rule_engine.py
+Buoi 5/sast-tool/sast_tool/vuln_pattern_matcher.py
+Buoi 5/sast-tool/tests/__init__.py
+Buoi 5/sast-tool/tests/test_ast_analyzer.py
+Buoi 5/sast-tool/tests/test_code_quality_checker.py
+Buoi 5/sast-tool/tests/test_main.py
+Buoi 5/sast-tool/tests/test_sarif_reporter.py
+Buoi 5/sast-tool/tests/test_security_rule_engine.py
+Buoi 5/sast-tool/tests/test_vuln_pattern_matcher.py

@@ -1,0 +1,255 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/monitor",
+    "status": 200,
+    "body": {
+      "cpu_usage": 0.0,
+      "memory_usage": 38494208,
+      "open_files": [
+        "C:\\Windows\\System32\\en-US\\KernelBase.dll.mui",
+        "<user>\\Documents\\Codex\\2026-10-21\\g\\work\\lab5-raw\\flask-stdout.txt",
+        "<user>\\Documents\\Codex\\2026-10-21\\g\\work\\lab5-raw\\flask-stderr.txt"
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/memory",
+    "status": 200,
+    "body": {
+      "memory_check": {
+        "collected_objects": 50,
+        "uncollectable_objects": 0
+      },
+      "overflow_test": true
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/network",
+    "status": 200,
+    "body": {
+      "network_stats": {
+        "interface_1": {
+          "bytes_recv": 10481215325,
+          "bytes_sent": 26600669359,
+          "dropin": 66926,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 24427433,
+          "packets_sent": 22272652
+        },
+        "interface_2": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_3": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_4": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_5": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_6": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_7": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_8": {
+          "bytes_recv": 0,
+          "bytes_sent": 0,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 0
+        },
+        "interface_9": {
+          "bytes_recv": 766808247,
+          "bytes_sent": 25225103752,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 18415975,
+          "packets_sent": 20423170
+        },
+        "interface_10": {
+          "bytes_recv": 0,
+          "bytes_sent": 18278,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 18276
+        },
+        "interface_11": {
+          "bytes_recv": 0,
+          "bytes_sent": 18272,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 18272
+        },
+        "interface_12": {
+          "bytes_recv": 0,
+          "bytes_sent": 18270,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 18269
+        },
+        "interface_13": {
+          "bytes_recv": 0,
+          "bytes_sent": 18290,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 18290
+        },
+        "interface_14": {
+          "bytes_recv": 2,
+          "bytes_sent": 18282,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 2,
+          "packets_sent": 18280
+        },
+        "interface_15": {
+          "bytes_recv": 570,
+          "bytes_sent": 18299,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 570,
+          "packets_sent": 18293
+        },
+        "interface_16": {
+          "bytes_recv": 11,
+          "bytes_sent": 18287,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 11,
+          "packets_sent": 18285
+        },
+        "interface_17": {
+          "bytes_recv": 2706,
+          "bytes_sent": 18289,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 2706,
+          "packets_sent": 18289
+        },
+        "interface_18": {
+          "bytes_recv": 0,
+          "bytes_sent": 18274,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 18273
+        },
+        "interface_19": {
+          "bytes_recv": 224,
+          "bytes_sent": 18273,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 224,
+          "packets_sent": 18273
+        },
+        "interface_20": {
+          "bytes_recv": 779857,
+          "bytes_sent": 622091,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 1976,
+          "packets_sent": 1977
+        },
+        "interface_21": {
+          "bytes_recv": 0,
+          "bytes_sent": 2923828,
+          "dropin": 0,
+          "dropout": 0,
+          "errin": 0,
+          "errout": 0,
+          "packets_recv": 0,
+          "packets_sent": 16605
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/security",
+    "status": 200,
+    "body": {
+      "suspicious_calls": []
+    }
+  }
+]

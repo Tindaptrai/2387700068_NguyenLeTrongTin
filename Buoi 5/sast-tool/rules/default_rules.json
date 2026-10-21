@@ -1,0 +1,7 @@
+[
+  {"type": "Use of eval", "severity": "high"},
+  {"type": "Use of exec", "severity": "high"},
+  {"type": "Pattern Match", "severity": "medium"},
+  {"type": "Lint Issue", "severity": "low"},
+  {"type": "Syntax Error", "severity": "high"}
+]

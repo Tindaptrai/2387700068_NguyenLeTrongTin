@@ -1,0 +1,14 @@
+# Command labels use path variables for readability; an escaped label was corrected.
+# Captured program output is preserved, with local paths normalized.
+> $py = Join-Path (Join-Path $env:TEMP 'lab05-tin-sast-20261021') 'Scripts\python.exe'
+> $report01 = Join-Path $env:TEMP 'lab05-report-01.sarif'
+> $report02 = Join-Path $env:TEMP 'lab05-report-02.sarif'
+
+> & $py -m sast_tool.main .\examples\vulnerable_01.py --output $report01
+Analysis complete: 5 issue(s).
+SARIF report saved to %TEMP%\lab05-report-01.sarif
+[exit code: 0]
+> & $py -m sast_tool.main .\examples\vulnerable_02.py --output $report02
+Analysis complete: 2 issue(s).
+SARIF report saved to %TEMP%\lab05-report-02.sarif
+[exit code: 0]

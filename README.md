@@ -14,3 +14,5 @@ Thực hành Lập trình An toàn Thông tin.
   với quét cổng, nhận dạng dịch vụ, bảng ARP và gửi kết quả qua email.
 - [Buổi 4 - Lab 04](Buoi%204): Web Vulnerability Scanner và JWT Security Tools,
   kèm hướng dẫn cài đặt, chạy ứng dụng/API, bộ kiểm thử và ảnh minh họa.
+- [Buổi 5 - Lab 05](Buoi%205): SAST phân tích mã Python và xuất SARIF;
+  DAST theo dõi tiến trình, bộ đếm mạng và Flask API, kèm ảnh từng bước thực hành.

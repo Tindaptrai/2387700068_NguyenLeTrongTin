@@ -1,0 +1,17 @@
+> & $sastPy -m unittest discover -s tests -v
+test_detects_eval_call (test_ast_analyzer.TestASTAnalyzer.test_detects_eval_call) ... ok
+test_reports_syntax_error (test_ast_analyzer.TestASTAnalyzer.test_reports_syntax_error) ... ok
+test_finds_flake8_issue (test_code_quality_checker.TestCodeQualityChecker.test_finds_flake8_issue) ... ok
+test_missing_source_returns_failure (test_main.TestMain.test_missing_source_returns_failure) ... ok
+test_writes_sarif_to_requested_output (test_main.TestMain.test_writes_sarif_to_requested_output) ... ok
+test_writes_sarif_21_report (test_sarif_reporter.TestSarifReporter.test_writes_sarif_21_report) ... ok
+test_applies_configured_severity (test_security_rule_engine.TestSecurityRuleEngine.test_applies_configured_severity) ... ok
+test_finds_hardcoded_password (test_vuln_pattern_matcher.TestVulnPatternMatcher.test_finds_hardcoded_password) ... ok
+test_finds_pickle_import (test_vuln_pattern_matcher.TestVulnPatternMatcher.test_finds_pickle_import) ... ok
+test_reports_matching_lines_after_blank_lines (test_vuln_pattern_matcher.TestVulnPatternMatcher.test_reports_matching_lines_after_blank_lines) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.724s
+
+OK
+[exit code: 0]
