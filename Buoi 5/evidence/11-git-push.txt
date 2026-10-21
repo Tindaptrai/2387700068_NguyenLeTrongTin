@@ -1,0 +1,11 @@
+> git add -- "Buoi 5" README.md
+> git diff --cached --check
+> git commit -m "feat: add Lab 05 SAST and DAST with illustrated guide" --quiet
+> git log -1 --oneline
+70feb3e feat: add Lab 05 SAST and DAST with illustrated guide
+> git push origin main
+To https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin.git
+   816b1af..70feb3e  main -> main
+[exit code: 0]
+> git status --short --branch
+## main...origin/main

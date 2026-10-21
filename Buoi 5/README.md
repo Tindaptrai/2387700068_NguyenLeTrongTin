@@ -366,7 +366,7 @@ git push origin main
 
 `git add` ở đây thêm cả thư mục Buổi 5 và mục giới thiệu Buổi 5 trong README gốc. `.gitignore` bỏ qua môi trường ảo, cache và tên báo cáo tạm mặc định. Không thêm môi trường ở `%TEMP%` hay file chứa thông tin riêng vào repository.
 
-
+![Kết quả commit và push Lab 05](images/11-git-push.jpg)
 
 *Log ghi nhận việc đẩy commit mã nguồn lên nhánh `main`. Ảnh push được chụp sau commit mã nguồn; commit tài liệu tiếp theo bổ sung chính ảnh push và ảnh GitHub vào bài hướng dẫn hoàn chỉnh.*
 
@@ -374,7 +374,7 @@ git push origin main
 
 Mở [thư mục Buổi 5 trên GitHub](https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/tree/main/Buoi%205). Kiểm tra có hai project, README và ảnh minh họa; cuộn README để xem hướng dẫn được render. Với một máy mới, clone repository rồi làm theo phần chuẩn bị và các bước cài đặt tương ứng.
 
-
+![Thư mục Buổi 5 hiển thị trên GitHub](images/12-github.jpg)
 
 *Ảnh trình duyệt xác nhận thư mục Lab 05 đã xuất hiện trong repository GitHub.*
 
