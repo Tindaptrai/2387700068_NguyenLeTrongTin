@@ -1,0 +1,7 @@
+Workflow: Lab 06 DevSecOps
+Run: 40648707530
+Conclusion: success
+Commit: d5a58a59e60558ce7b524036b54a7bf4f5a4f2a4
+Required security gate: SUCCESS
+Verified with GitHub CLI at 2026-10-28 14:17:16 +07:00
+URL: https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530

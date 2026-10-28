@@ -1,0 +1,12 @@
+Workflow: Lab 06 DevSecOps
+Run: 40648707530
+Commit: d5a58a59e60558ce7b524036b54a7bf4f5a4f2a4
+Conclusion: success
+URL: https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530
+Jobs:
+[SUCCESS] Unit tests and compile check
+[SUCCESS] IaC scan - Checkov
+[SUCCESS] SCA - pip-audit
+[SUCCESS] SAST - Bandit
+[SUCCESS] Secret scan - Gitleaks
+[SUCCESS] Required security gate

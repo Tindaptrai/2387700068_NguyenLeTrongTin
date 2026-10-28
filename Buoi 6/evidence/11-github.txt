@@ -1,0 +1,9 @@
+Repository: Tindaptrai/2387700068_NguyenLeTrongTin
+URL: https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin
+Visibility: public
+Default branch: main
+Lab folder: Buoi 6/
+Week 6 README: Buoi 6/README.md
+Workflow: .github/workflows/lab06-devsecops.yml
+Successful workflow run: 40648707530
+Run URL: https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530

@@ -69,7 +69,7 @@ Push / Pull Request thay đổi Buổi 6
           └── Có: lưu báo cáo và hoàn tất
 ```
 
-Workflow nằm tại [`../.github/workflows/lab06-devsecops.yml`](../.github/workflows/lab06-devsecops.yml). Nó chạy khi push hoặc pull request có thay đổi trong `Buoi 6/devsecops-demo/`, khi workflow được sửa, hoặc khi được kích hoạt thủ công. Các job quét phụ thuộc vào job test; job cuối kiểm tra trạng thái của tất cả gate.
+Workflow nằm tại [`../.github/workflows/lab06-devsecops.yml`](../.github/workflows/lab06-devsecops.yml). Nó chạy khi push hoặc pull request có thay đổi trong `Buoi 6/`, khi workflow được sửa, hoặc khi được kích hoạt thủ công. Các job quét phụ thuộc vào job test; job cuối kiểm tra trạng thái của tất cả gate.
 
 ## 4. Chuẩn bị môi trường cục bộ
 
@@ -129,11 +129,11 @@ Bandit phân tích mã Python và chỉ báo các finding mức trung bình/cao.
 
 ## 8. Secret scanning với Gitleaks
 
-Gitleaks chạy trong GitHub Actions với lịch sử Git được checkout đầy đủ. File `.gitleaks.toml` cấu hình phạm vi loại trừ cho ảnh và log bằng chứng do chúng chỉ chứa dữ liệu minh họa. Không lưu token, mật khẩu, khóa API hay GitHub token vào source. Nếu scanner phát hiện secret thật, cần thu hồi secret trước khi xử lý lịch sử commit.
+Gitleaks chạy trong GitHub Actions sau khi checkout repository. Run minh chứng quét commit kích hoạt workflow (1 commit). File `.gitleaks.toml` giới hạn loại trừ ở ảnh và log bằng chứng của lab. Không lưu token, mật khẩu, khóa API hay GitHub token vào source. Nếu scanner phát hiện secret thật, cần thu hồi secret trước khi xử lý lịch sử commit.
 
 ![Kết quả Gitleaks](images/05-secret-scan.png)
 
-*Ảnh chụp job secret scan thực tế trên GitHub Actions.*
+*Khung minh chứng được kết xuất từ log job Gitleaks; run thật: [mở trên GitHub](https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530).*
 
 ## 9. IaC scan với Checkov
 
@@ -162,17 +162,19 @@ Sau khi push commit:
 4. Mở từng job nếu cần xem log chi tiết.
 5. Mở **Artifacts** để tải báo cáo Bandit JSON, dependency audit JSON và Checkov SARIF.
 
+[Mở trang các lần chạy Lab 06 trên GitHub](https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/workflows/lab06-devsecops.yml).
+
 ![Tổng quan pipeline](images/07-pipeline.png)
 
-*Các gate được chạy tự động trên cùng một commit; gate cuối chỉ thành công khi các job bắt buộc đều thành công.*
+*Khung minh chứng được kết xuất từ kết quả job trực tiếp của GitHub Actions; xem run thật tại [đường dẫn này](https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530).*
 
 ![GitHub Actions run](images/08-github-actions.png)
 
-*Ảnh chụp trang run trên GitHub Actions sau khi workflow hoàn tất.*
+*Khung minh chứng ghi lại kết luận `success` và trạng thái gate cuối từ run GitHub Actions.*
 
 ![Artifacts của pipeline](images/09-artifacts.png)
 
-*Ảnh chụp danh sách báo cáo được lưu làm artifacts.*
+*Khung minh chứng được kết xuất từ danh sách artifacts của run; có thể tải các báo cáo từ trang run trên GitHub.*
 
 Artifacts ghi lại kết quả của một lần quét tại một commit cụ thể, không phải cam kết rằng phần mềm tuyệt đối an toàn. Khi review, đối chiếu commit SHA, thời gian chạy, phiên bản công cụ và trạng thái từng job.
 
@@ -188,7 +190,7 @@ git push origin main
 git status --short --branch
 ```
 
-Không commit `.venv/`, báo cáo tạm, token hoặc secret thật. Sau push, kiểm tra thư mục **Buổi 6** hiển thị trên nhánh `main`, ảnh README tải được và Actions run tương ứng đã hoàn tất.
+Không commit `.venv/`, báo cáo tạm, token hoặc secret thật. Sau push, mở thư mục **Buổi 6** trên nhánh `main` và kiểm tra Actions run đã hoàn tất.
 
 ![Kết quả push](images/10-git-push.png)
 
@@ -196,7 +198,7 @@ Không commit `.venv/`, báo cáo tạm, token hoặc secret thật. Sau push, k
 
 ![Buổi 6 trên GitHub](images/11-github.png)
 
-*Ảnh chụp repository sau khi thư mục bài và README đã được đưa lên GitHub.*
+*Khung minh chứng ghi lại metadata repository và nội dung thư mục từ GitHub API. [Mở thư mục Buổi 6 trên nhánh main](https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/tree/main/Buoi%206).*
 
 ## 12. Kết quả kiểm chứng
 
@@ -211,7 +213,7 @@ Không commit `.venv/`, báo cáo tạm, token hoặc secret thật. Sau push, k
 | GitHub Actions | Required security gate thành công | `evidence/08-github-actions.txt` |
 | GitHub push | Commit hiện trên `main` | `evidence/10-git-push.txt` |
 
-Các khung minh chứng bước local được kết xuất từ log lệnh nguyên bản trong `evidence/` để dễ đọc; file `.txt` là bản đối chiếu đầy đủ. Ảnh GitHub Actions, artifacts và repository là ảnh chụp các trang công khai thật của repository.
+Các ảnh PNG trong README là khung minh chứng được kết xuất từ log lệnh nguyên bản hoặc dữ liệu GitHub CLI/API để dễ đọc; file `.txt` là bản đối chiếu. Các liên kết mở trang GitHub thật của run và repository.
 
 ## 13. Kết luận
 

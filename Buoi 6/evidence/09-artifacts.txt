@@ -1,0 +1,7 @@
+Run: 40648707530
+URL: https://github.com/Tindaptrai/2387700068_NguyenLeTrongTin/actions/runs/40648707530
+Artifacts:
+iac-scan-sarif | 867 bytes | expired=false
+gitleaks-results.sarif | 447 bytes | expired=false
+bandit-json | 351 bytes | expired=false
+dependency-audit-json | 401 bytes | expired=false
