@@ -16,3 +16,4 @@ Thực hành Lập trình An toàn Thông tin.
   kèm hướng dẫn cài đặt, chạy ứng dụng/API, bộ kiểm thử và ảnh minh họa.
 - [Buổi 5 - Lab 05](Buoi%205): SAST phân tích mã Python và xuất SARIF;
   DAST theo dõi tiến trình, bộ đếm mạng và Flask API, kèm ảnh từng bước thực hành.
+- [Buổi 6 - Lab 06](Buoi%206): demo DevSecOps với test, SAST, quét dependency, secret và IaC trong GitHub Actions; có README hướng dẫn và ảnh minh họa từng bước.

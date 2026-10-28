@@ -1,0 +1,8 @@
+Command: checkov -d iac --framework terraform --compact --skip-check CKV2_AWS_62,CKV_AWS_144
+Passed checks: 27, Failed checks: 0, Skipped checks: 1
+Exit code: 0
+
+Scope notes:
+- CKV2_AWS_62 is skipped because this static artifact-storage sample has no notification consumer.
+- CKV_AWS_144 is skipped because cross-region replication is outside this no-deployment lab.
+- CKV_AWS_18 is skipped on the access-log destination bucket to avoid recursive self-logging.

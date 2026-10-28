@@ -1,0 +1,6 @@
+Environment packages installed for Lab 06
+
+Python 3.12.14 Flask 3.1.3 pytest 9.2.0 Bandit 1.9.4 pip-audit 2.10.1
+
+Command: python -m pip install -r requirements.txt pip-audit
+Result: completed successfully.

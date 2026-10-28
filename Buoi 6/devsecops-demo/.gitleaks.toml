@@ -1,0 +1,8 @@
+title = "DevSecOps Lab 06"
+
+[allowlist]
+description = "Only screenshots and command logs from this lab are excluded from secret detection"
+paths = [
+  "Buoi 6/images/",
+  "Buoi 6/evidence/",
+]

@@ -1,0 +1,7 @@
+Command: python -m pytest -q
+.                                                                        [100%]
+1 passed in 0.18s
+
+Command: python -m compileall -q app.py tests
+compileall completed with exit code 0.
+Exit code: 0

@@ -1,0 +1,12 @@
+.venv*/
+__pycache__/
+*.py[cod]
+
+# Generated scan reports
+bandit-report.json
+bandit.sarif
+pip-audit-report.json
+pip-audit.json
+gitleaks-report.json
+checkov-report.json
+checkov.sarif

@@ -1,0 +1,13 @@
+Repository: 2387700068_NguyenLeTrongTin
+Lab folder: Buoi 6
+
+.github/workflows/lab06-devsecops.yml
+Buoi 6/README.md
+Buoi 6/.gitignore
+Buoi 6/devsecops-demo/.gitleaks.toml
+Buoi 6/devsecops-demo/app.py
+Buoi 6/devsecops-demo/requirements.txt
+Buoi 6/devsecops-demo/iac/main.tf
+Buoi 6/devsecops-demo/tests/test_app.py
+Buoi 6/evidence/
+Buoi 6/images/
