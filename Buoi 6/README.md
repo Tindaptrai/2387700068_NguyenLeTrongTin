@@ -108,7 +108,7 @@ Các phiên bản dependency của ứng dụng được pin trong `requirements
 .\.venv\Scripts\bandit.exe -r app.py -ll
 ```
 
-Bandit phân tích mã Python và chỉ báo các finding mức trung bình/cao. Workflow cũng xuất `bandit.sarif` thành artifact để có thể xem lại kết quả gắn với commit đã quét.
+Bandit phân tích mã Python và chỉ báo các finding mức trung bình/cao. Workflow cũng xuất `bandit.json` thành artifact để có thể xem lại kết quả gắn với commit đã quét.
 
 ![Kết quả Bandit](images/03-sast.png)
 
@@ -160,7 +160,7 @@ Sau khi push commit:
 2. Chọn workflow **Lab 06 DevSecOps** và mở run mới nhất.
 3. Kiểm tra `Unit tests and compile check`, `SAST`, `SCA`, `Secret scan`, `IaC scan` và `Required security gate`.
 4. Mở từng job nếu cần xem log chi tiết.
-5. Mở **Artifacts** để tải báo cáo Bandit SARIF, dependency audit JSON và Checkov SARIF.
+5. Mở **Artifacts** để tải báo cáo Bandit JSON, dependency audit JSON và Checkov SARIF.
 
 ![Tổng quan pipeline](images/07-pipeline.png)
 
